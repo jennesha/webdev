@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styless.css">
+    <style>
+    </style>
+</head>
+<body>
+    <form>
+   <div id="container_p">
+       <h1>FWA Natural</h1>
+       <div class="">
+           <table id="table">
+               <tr>
+                   <th>Item</th>
+                   <th>Unit Price</th>
+                   <th>Quantity</th>
+                   <th>Total</th>
+               </tr>
+               <tr>
+                   <td>Digestive Enzymes</td>
+                   <td><input type="text" value="35.95" name="price" class="price" readonly></td>
+                   <td><input type="text" class="qty" value="" name="qty"> </td>
+                   <td><input type="text" class="subtot" value="0.00" name="subtot" readonly></td>
+               </tr>
+               <tr>
+                   <td>Vegan Multivitamin</td>
+                   <td><input type="text" value="20.50" name="price" class="price" readonly></td>
+                   <td><input type="text" class="qty" value="" name="qty"> </td>
+                   <td><input type="text" class="subtot" value="0.00" name="subtot" readonly></td>
+               </tr>
+               <tr>
+                <td>Protein Powder</td>
+                <td><input type="text" value="44.65" name="price" class="price" readonly></td>
+                <td><input type="text" class="qty" value="" name="qty"> </td>
+                <td><input type="text" class="subtot" value="0.00" name="subtot" readonly></td>
+            </tr>
+            <tr>
+                <td>Alfalfa Tablets</td>
+                <td><input type="text" value="14.29" name="price" class="price" readonly></td>
+                <td><input type="text" class="qty" value="" name="qty"> </td>
+                <td><input type="text" class="subtot" value="0.00" name="subtot" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: right;">Total</td>
+                <td><input type="text" class="tot" value="0.00" name="" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: right;">Shipping Method</td>
+                <td colspan="2">
+                    <select name="shippingMthd" id="shippingMthd" required>
+                    <option value="0" disabled selected>Select One</option>
+                    <option value="15.95">Express</option>
+                    <option value="10.95">1 day</option>
+                    <option value="7.95">Priority</option>
+                    <option value="3.95">Economy</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: right;">Shipping</td>
+                <td><input type="text" id="shipping" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center;"><button id="totalOrder">Calculate Order Total</button></td>
+                <td><input type="text" id="grandTotal" value="0.00" readonly></td>
+            </tr>
+
+
+           </table>
+       </div>
+       <div class="shippingInfo">
+           <span>Ship To:</span>
+           <br>
+           <div class="info">
+               <span>Name: <input type="text" id="sName" required></span><br>
+               <span>Address Line 1: <input type="text" id="sAddr1" required></span><br>
+               <span>Address Line 2: <input type="text" id="sAddr2" ></span><br>
+               <span>City: <input class="csz" type="text" id="sCity" required></span>
+               <span>State: <input class="csz" type="text" id="sState" pattern="[A-Z]{2}" placeholder="--" required></span>
+               <span>Zip: <input class="csz" id="sZip" type="text" pattern="[0-9]{5}" placeholder="-----" required></span>
+           </div>
+           <br>
+           <span>Billing address same as shipping address
+               <input type="radio" id="same" name="billAddr" value="Y">
+               <label for="same">Yes</label>
+               <input type="radio" id="NotSame" name="billAddr" value="N">
+               <label for="NotSame">No</label>
+           </span><br>
+           <span>Bill To:</span>
+           <div class="info">
+            <span>Name: <input type="text" class="billInfo" id="bName" disabled></span><br>
+            <span>Address Line 1: <input type="text" class="billInfo" id="bAddr1" disabled></span><br>
+            <span>Address Line 2: <input type="text" class="billInfo" id="bAddr2" disabled></span><br>
+            <span>City: <input class="csz" id="bCity" class="billInfo" type="text" disabled></span>
+            <span>State: <input class="csz" id="bState" class="billInfo" type="text" pattern="[A-Z]{2}" id="billTo" disabled></span>
+            <span>Zip: <input class="csz" id="bZip" class="billInfo" type="text" pattern="[0-9]{5}" id="billTo" disabled></span>
+           </div>
+        <button type="submit" id="submitBtn">Submit</button>
+        <button type="reset">Reset</button>
+
+        <h4 id="OrderInfo"></h4>
+       </div>
+
+   </div>
+    </form>
+   <script src="jquery-3.6.0.min.js"></script>
+   <script src="script.js"></script>
+</body>
+</html>
