@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid Conversion</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div id="content">
+        <h1><center>Liquid Converter</center></h1>
+        <div id="converter">
+            <p>How much do you want to convert?</p>
+            <input type="text" id="amount">
+            <p>From what unit?</p>
+            <select id="unitFrom">
+                <option disabled selected value="0">-- Choose an Option --</option>
+                <option value=".1666666667">teaspoon</option>
+                <option value="0.5">tablespoon</option>
+                <option value="1">fluid ounce</option>
+                <option value="8">cup</option>
+                <option value="16">pint</option>
+                <option value="32">quart</option>
+                <option value="128">gallon</option>
+                <option value="4032">barrel</option>
+                <option value=".033814022701843">milliliter</option>
+                <option value="3.3814022701843">deciliter</option>
+                <option value="33.814022701843">liter</option>
+                <option value="33814.022701843">m³</option>
+
+            </select>
+            <p>To what unit?</p>
+            <select id="unitTo">
+                <option disabled selected value="0">-- Choose an Option --</option>
+                <option value="6">teaspoon</option>
+                <option value="2">tablespoon</option>
+                <option value="1">fluid ounce</option>
+                <option value=".125">cup</option>
+                <option value=".0625">pint</option>
+                <option value=".03125">quart</option>
+                <option value=".0078125">gallon</option>
+                <option value="0.00024801587301587">barrel</option>
+                <option value="29.5735295625">milliliter</option>
+                <option value=".295735295625">deciliter</option>
+                <option value=".0295735295625">liter</option>
+                <option value="0.0000295735295625">m³</sup></option>
+            </select>
+            <button id="btn_conv" onclick="convert()">Convert</button>
+        </div> <!-- Converter End -->
+        
+        <div id="result">
+            <span id="amountDisp">0.00</span>
+            <span id="unitDisp"></span>
+        </div> <!-- Result end -->
+
+        <div>
+            <script type="text/javascript" src="script.js"></script>
+        </div>
+        
+    </div> <!-- content end -->
+</body>
+</html>
